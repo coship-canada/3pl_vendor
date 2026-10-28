@@ -1,14 +1,255 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3PL Shipper Portal · Demo</title><style>
-:root{--ink:#142b38;--muted:#667983;--line:#e2e9ec;--bg:#f4f7f8;--paper:#fff;--nav:#12313d;--mint:#74dfc0;--mint2:#e2f8f1;--blue:#e8f2f7;--orange:#fff1df;--red:#fdeceb;--shadow:0 10px 30px #1538440c}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}.shell{min-height:100vh;display:grid;grid-template-columns:246px 1fr}.side{background:var(--nav);color:#e6f1f2;padding:22px 16px;display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:11px;padding:4px 9px 26px}.mark{width:34px;height:34px;border-radius:11px;background:var(--mint);color:#13323e;display:grid;place-items:center;font-size:18px;font-weight:800}.brand b{letter-spacing:.08em;font-size:14px}.brand small{display:block;color:#9bb3bb;font-size:10px;margin-top:3px}.navcap{padding:12px 10px 6px;color:#89a4ad;text-transform:uppercase;letter-spacing:.1em;font-size:10px}.nav button{width:100%;border:0;background:transparent;color:#bfd0d5;text-align:left;border-radius:8px;padding:11px 12px;margin:2px 0;font:inherit;font-size:13px;cursor:pointer;display:flex;gap:12px;align-items:center}.nav button:hover,.nav button.active{background:#ffffff17;color:#fff}.nav button.active{box-shadow:inset 3px 0 var(--mint)}.navicon{width:17px;text-align:center;color:var(--mint)}.side-foot{margin-top:auto;padding:16px 10px;color:#98b0b8;font-size:11px;border-top:1px solid #ffffff1c;line-height:1.6}.main{min-width:0}.top{height:66px;background:var(--paper);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px}.crumb{color:var(--muted);font-size:12px}.account{display:flex;align-items:center;gap:10px}.avatar{width:34px;height:34px;border-radius:50%;background:#def2eb;color:#236a5b;display:grid;place-items:center;font-weight:700}.account b{font-size:12px;display:block}.account small{font-size:10px;color:var(--muted)}.wrap{max-width:1440px;margin:0 auto;padding:28px 32px 48px}.demo{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px solid #bfe9dc;background:#effaf6;color:#2c6457;border-radius:9px;padding:10px 13px;font-size:11px;margin-bottom:23px}.demo strong{font-size:11px;letter-spacing:.03em}.heading{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:22px}.eyebrow{margin:0 0 7px;color:#67808a;font-size:10px;letter-spacing:.12em;text-transform:uppercase}.heading h1{font-size:26px;letter-spacing:-.03em;margin:0 0 6px}.heading p{color:var(--muted);font-size:12px;margin:0}.buttons{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:white;color:var(--ink);border-radius:7px;padding:9px 13px;font:inherit;font-size:12px;cursor:pointer}.btn:hover{border-color:#8eb8ad}.btn.primary{background:var(--nav);border-color:var(--nav);color:white}.btn.mint{background:var(--mint);border-color:var(--mint);color:#11343c;font-weight:700}.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-bottom:18px}.kpi,.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}.kpi{padding:16px}.kpi-top{display:flex;justify-content:space-between;color:var(--muted);font-size:11px}.kpi strong{display:block;font-size:25px;letter-spacing:-.03em;margin:13px 0 4px}.kpi small{font-size:10px;color:var(--muted)}.kicon{display:grid;place-items:center;width:31px;height:31px;border-radius:9px;background:var(--mint2);color:#32816c}.grid2{display:grid;grid-template-columns:1.35fr 1fr;gap:15px;margin-bottom:15px}.card{padding:17px}.cardhead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}.card h2{font-size:14px;margin:0}.link{color:#357b6b;background:none;border:0;font:inherit;font-size:11px;cursor:pointer}.timeline{display:grid;gap:0}.event{display:grid;grid-template-columns:32px 1fr auto;gap:10px;align-items:center;padding:11px 0;border-top:1px solid #edf1f2}.event:first-child{border-top:0}.eventicon{width:30px;height:30px;border-radius:9px;background:var(--blue);display:grid;place-items:center;color:#3b7087}.event b{font-size:11px;display:block;margin-bottom:3px}.event small{font-size:10px;color:var(--muted)}.event time{font-size:10px;color:var(--muted)}.status{font-size:10px;font-weight:600;padding:5px 8px;border-radius:20px;background:var(--mint2);color:#357260;white-space:nowrap}.status.blue{background:var(--blue);color:#426c80}.status.orange{background:var(--orange);color:#9b671f}.status.red{background:var(--red);color:#9b4540}.tabletools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:14px 0 0;padding:11px;background:#fff;border:1px solid var(--line);border-radius:8px 8px 0 0}.search,.select{min-height:35px;border:1px solid var(--line);border-radius:6px;background:#fff;padding:8px 10px;color:var(--muted);font:inherit;font-size:11px}.search{flex:1;min-width:190px}.select{min-width:130px}.tablebox{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:0 0 8px 8px}.tablebox table{border-collapse:collapse;width:100%;font-size:11px;white-space:nowrap}.tablebox th{text-align:left;color:var(--muted);font-size:9px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;padding:12px;border-bottom:1px solid var(--line)}.tablebox td{padding:13px 12px;border-bottom:1px solid #edf1f2}.tablebox tr:last-child td{border-bottom:0}.tablebox tbody tr:hover{background:#f8fbfa}.code{font-weight:700}.sub{display:block;color:var(--muted);font-size:10px;margin-top:3px}.qty{font-variant-numeric:tabular-nums}.screen{display:none}.screen.active{display:block}.empty-note{padding:15px;border-radius:8px;background:#f7fafb;color:var(--muted);font-size:11px;line-height:1.6;margin-top:14px}.portal-banner{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:16px 18px;border-radius:10px;background:linear-gradient(110deg,#12313d,#1b5960);color:#fff;margin-bottom:15px}.portal-banner h2{font-size:15px;margin:0 0 5px}.portal-banner p{font-size:11px;color:#c5dddc;margin:0}.portal-banner .btn{background:var(--mint);border-color:var(--mint)}.invoice-total{font-size:12px;font-weight:700}.month-chip{background:var(--blue);color:#476c7c;padding:5px 8px;border-radius:20px;font-size:10px}.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.detail{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:11px}.detail:first-of-type{border-top:0}.detail span{color:var(--muted)}.footer{text-align:center;color:#87969c;font-size:10px;margin-top:25px}.modal{position:fixed;inset:0;background:#10283288;display:none;place-items:center;padding:18px;z-index:10}.modal.open{display:grid}.dialog{background:#fff;width:min(520px,100%);border-radius:12px;padding:20px;box-shadow:0 25px 90px #081c2744}.dialog-head{display:flex;justify-content:space-between;align-items:start;margin-bottom:14px}.dialog h2{font-size:17px;margin:0 0 4px}.dialog p{font-size:11px;color:var(--muted);line-height:1.6}.close{border:0;background:transparent;font-size:22px;cursor:pointer;color:#6a7b81}.dialog-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.toast{position:fixed;bottom:22px;right:24px;background:#12313d;color:white;border-radius:8px;padding:12px 16px;font-size:11px;box-shadow:var(--shadow);display:none;z-index:20}.toast.show{display:block}@media(max-width:980px){.shell{grid-template-columns:205px 1fr}.wrap{padding:22px 20px 38px}.top{padding:0 20px}.grid2{grid-template-columns:1fr}}@media(max-width:700px){.shell{grid-template-columns:62px 1fr}.side{padding:17px 6px}.brand{justify-content:center;padding:3px 0 23px}.brandtext,.navcap,.navlabel,.side-foot{display:none}.nav button{justify-content:center;padding:12px 2px;font-size:0}.navicon{font-size:15px}.top{height:57px;padding:0 13px}.wrap{padding:16px 12px 30px}.heading{display:block}.heading .buttons{margin-top:14px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.kpi{padding:12px}.kpi strong{font-size:21px}.portal-banner{align-items:flex-start;flex-direction:column}.profile-grid{grid-template-columns:1fr}.demo{align-items:flex-start;flex-direction:column}}
-</style></head><body>
-<div class="shell"><aside class="side"><div class="brand"><div class="mark">H</div><div class="brandtext"><b>HARBOR &amp; CO.</b><small>SHIPPER PORTAL</small></div></div><div class="navcap">Workspace</div><nav class="nav" aria-label="Portal sections"><button class="active" data-view="home"><span class="navicon">⌂</span><span class="navlabel">Overview</span></button><button data-view="inventory"><span class="navicon">▦</span><span class="navlabel">Inventory</span></button><button data-view="orders"><span class="navicon">⇄</span><span class="navlabel">Inbound / Outbound</span></button><button data-view="tracking"><span class="navicon">⌖</span><span class="navlabel">Tracking</span></button><button data-view="invoices"><span class="navicon">▤</span><span class="navlabel">Invoices</span></button><button data-view="reports"><span class="navicon">▧</span><span class="navlabel">Reports</span></button></nav><div class="side-foot">Signed in as Harbor &amp; Co.<br>Account ID · PT-1082</div></aside>
-<div class="main"><header class="top"><div class="crumb">Partner Portal &nbsp; / &nbsp; <span id="crumb">Overview</span></div><div class="account"><div class="avatar">HC</div><div><b>Harbor &amp; Co.</b><small>Partner account</small></div><button class="link" data-action="profile" aria-label="Account settings">⌄</button></div></header><div class="wrap"><div class="demo"><strong>INTERACTIVE DEMO · SAMPLE DATA</strong><span>All names, quantities and charges are fictional. Buttons show sample interactions only.</span></div><div class="heading"><div><p class="eyebrow">Warehouse services</p><h1 id="title">Good morning, Harbor &amp; Co.</h1><p id="subtitle">Here is the latest activity for your inventory and shipments.</p></div><div class="buttons"><button class="btn" data-action="help">Help center</button><button class="btn mint" data-action="export">⬇ &nbsp; Export report</button></div></div>
-<section class="screen active" data-screen="home"><div class="portal-banner"><div><h2>Your warehouse at a glance</h2><p>Inventory, orders and shipment progress in one place.</p></div><button class="btn" data-goto="inventory">View inventory</button></div><div class="kpis"><div class="kpi"><div class="kpi-top"><span>Active items</span><span class="kicon">▦</span></div><strong>148</strong><small>Across your managed catalog</small></div><div class="kpi"><div class="kpi-top"><span>Units in stock</span><span class="kicon">▣</span></div><strong>3,284</strong><small>Available A + B inventory</small></div><div class="kpi"><div class="kpi-top"><span>Open orders</span><span class="kicon">⇄</span></div><strong>12</strong><small>4 awaiting dispatch</small></div><div class="kpi"><div class="kpi-top"><span>In transit</span><span class="kicon">⌖</span></div><strong>7</strong><small>Latest update 18 min ago</small></div></div><div class="grid2"><div class="card"><div class="cardhead"><h2>Recent activity</h2><button class="link" data-goto="orders">See all</button></div><div class="timeline"><div class="event"><div class="eventicon">↓</div><div><b>Inbound received · PO HC-4821</b><small>24 cartons · 360 units added to inventory</small></div><time>Today · 9:42 AM</time></div><div class="event"><div class="eventicon">↗</div><div><b>Order dispatched · HC-4814</b><small>Tracking number 1Z 42A 08E 03 1184 228</small></div><time>Today · 8:15 AM</time></div><div class="event"><div class="eventicon">✓</div><div><b>Invoice available · September</b><small>Invoice HARBOR 2609 · CAD $1,842.50</small></div><time>Yesterday</time></div></div></div><div class="card"><div class="cardhead"><h2>Quick links</h2></div><div class="event"><div class="eventicon">▦</div><div><b>Check stock levels</b><small>Search your item catalog</small></div><button class="link" data-goto="inventory">Open →</button></div><div class="event"><div class="eventicon">⌖</div><div><b>Track a shipment</b><small>View your latest carrier updates</small></div><button class="link" data-goto="tracking">Open →</button></div><div class="event"><div class="eventicon">▤</div><div><b>Download an invoice</b><small>View monthly settlement documents</small></div><button class="link" data-goto="invoices">Open →</button></div></div></div></section>
-<section class="screen" data-screen="inventory"><div class="kpis"><div class="kpi"><div class="kpi-top"><span>Managed ItemCodes</span><span class="kicon">▦</span></div><strong>148</strong><small>Catalog items</small></div><div class="kpi"><div class="kpi-top"><span>Available A stock</span><span class="kicon">A</span></div><strong>3,106</strong><small>Regular inventory</small></div><div class="kpi"><div class="kpi-top"><span>Available B stock</span><span class="kicon">B</span></div><strong>178</strong><small>Marked B inventory</small></div><div class="kpi"><div class="kpi-top"><span>Inbound pending</span><span class="kicon">↓</span></div><strong>2</strong><small>Expected receipts</small></div></div><div class="card"><div class="cardhead"><h2>Inventory balances</h2><span class="month-chip">Updated today · 10:24 AM</span></div><div class="tabletools"><input id="inventory-search" class="search" placeholder="Search ItemCode, item name or UPC"><select class="select" id="stock-filter"><option value="all">All stock types</option><option value="A">A stock</option><option value="B">B stock</option></select><button class="btn" data-action="export">Export CSV</button></div><div class="tablebox"><table><thead><tr><th>ItemCode</th><th>Item name</th><th>UPC</th><th>A available</th><th>B available</th><th>Inventory</th></tr></thead><tbody id="inventory-rows"><tr data-stock="A"><td class="code">HC-0001</td><td>Daily Hydration Mix</td><td>628451000128</td><td class="qty">428</td><td class="qty">12</td><td><span class="status">Managed</span></td></tr><tr data-stock="A"><td class="code">HC-0002</td><td>Botanical Sleep Blend</td><td>628451000135</td><td class="qty">216</td><td class="qty">0</td><td><span class="status">Managed</span></td></tr><tr data-stock="B"><td class="code">HC-0003</td><td>Vitamin C Citrus</td><td>628451000142</td><td class="qty">0</td><td class="qty">37</td><td><span class="status orange">B stock</span></td></tr><tr data-stock="A"><td class="code">HC-0004</td><td>Collagen Peptides</td><td>628451000159</td><td class="qty">184</td><td class="qty">0</td><td><span class="status">Managed</span></td></tr></tbody></table></div><p class="empty-note">A stock and B stock are shown separately. Inventory marked NI (not inventoried) is excluded from balance totals.</p></div></section>
-<section class="screen" data-screen="orders"><div class="kpis"><div class="kpi"><div class="kpi-top"><span>Inbound this month</span><span class="kicon">↓</span></div><strong>8</strong><small>6 received · 2 expected</small></div><div class="kpi"><div class="kpi-top"><span>Outbound orders</span><span class="kicon">↑</span></div><strong>34</strong><small>30 shipped · 4 processing</small></div><div class="kpi"><div class="kpi-top"><span>Awaiting dispatch</span><span class="kicon">◷</span></div><strong>4</strong><small>Preparing at warehouse</small></div><div class="kpi"><div class="kpi-top"><span>Delivered</span><span class="kicon">✓</span></div><strong>26</strong><small>This billing month</small></div></div><div class="card"><div class="cardhead"><h2>Inbound &amp; outbound orders</h2><span class="month-chip">October 2026</span></div><div class="tabletools"><input class="search" placeholder="Search PO, item or order"><select class="select"><option>All activity</option><option>Inbound</option><option>Outbound</option></select><select class="select"><option>Any status</option><option>Processing</option><option>Shipped</option><option>Received</option></select></div><div class="tablebox"><table><thead><tr><th>Activity</th><th>PO / reference</th><th>Date</th><th>Items</th><th>Units</th><th>Status</th><th></th></tr></thead><tbody><tr><td>Inbound</td><td class="code">HC-4821</td><td>Oct 27, 2026</td><td>4 items</td><td>360</td><td><span class="status">Received</span></td><td><button class="link" data-action="order-detail">View</button></td></tr><tr><td>Outbound</td><td class="code">HC-4814</td><td>Oct 27, 2026</td><td>3 items</td><td>18</td><td><span class="status blue">In transit</span></td><td><button class="link" data-goto="tracking">Track</button></td></tr><tr><td>Outbound</td><td class="code">HC-4809</td><td>Oct 26, 2026</td><td>5 items</td><td>42</td><td><span class="status orange">Processing</span></td><td><button class="link" data-action="order-detail">View</button></td></tr><tr><td>Inbound</td><td class="code">HC-4828</td><td>Expected Oct 30</td><td>6 items</td><td>540</td><td><span class="status orange">Expected</span></td><td><button class="link" data-action="order-detail">View</button></td></tr></tbody></table></div><p class="empty-note">Outbound quantities are reflected in stock after the shipment date is confirmed.</p></div></section>
-<section class="screen" data-screen="tracking"><div class="kpis"><div class="kpi"><div class="kpi-top"><span>In transit</span><span class="kicon">⌖</span></div><strong>7</strong><small>Across your outbound shipments</small></div><div class="kpi"><div class="kpi-top"><span>Delivered this month</span><span class="kicon">✓</span></div><strong>26</strong><small>Last delivered today</small></div><div class="kpi"><div class="kpi-top"><span>Carrier exceptions</span><span class="kicon">!</span></div><strong>1</strong><small>Review shipment details</small></div><div class="kpi"><div class="kpi-top"><span>Latest update</span><span class="kicon">◷</span></div><strong>18m</strong><small>Carrier event received</small></div></div><div class="card"><div class="cardhead"><h2>Shipment tracking</h2><button class="btn" data-action="export">Export tracking</button></div><div class="tabletools"><input class="search" placeholder="Search tracking number or PO"><select class="select"><option>All shipment statuses</option><option>In transit</option><option>Delivered</option><option>Exception</option></select></div><div class="tablebox"><table><thead><tr><th>PO</th><th>Carrier</th><th>Tracking number</th><th>Destination</th><th>Last event</th><th>Updated</th><th>Status</th></tr></thead><tbody><tr><td class="code">HC-4814</td><td>UPS</td><td>1Z 42A 08E 03 1184 228</td><td>Vancouver, BC</td><td>Departed facility</td><td>18 min ago</td><td><span class="status blue">In transit</span></td></tr><tr><td class="code">HC-4803</td><td>Canada Post</td><td>7328 1000 4821 6054</td><td>Burnaby, BC</td><td>Delivered</td><td>Today · 8:05 AM</td><td><span class="status">Delivered</span></td></tr><tr><td class="code">HC-4798</td><td>UPS</td><td>1Z 42A 08E 03 1170 914</td><td>Richmond, BC</td><td>Address correction required</td><td>Today · 7:44 AM</td><td><span class="status red">Exception</span></td></tr></tbody></table></div><p class="empty-note">Tracking shows customer-facing shipment status and carrier events. Carrier costs and internal margin are not available in this portal.</p></div></section>
-<section class="screen" data-screen="invoices"><div class="kpis"><div class="kpi"><div class="kpi-top"><span>Open balance</span><span class="kicon">$</span></div><strong>$2,410</strong><small>CAD · 2 unpaid invoices</small></div><div class="kpi"><div class="kpi-top"><span>Latest invoice</span><span class="kicon">▤</span></div><strong>Sep ’26</strong><small>HARBOR 2609</small></div><div class="kpi"><div class="kpi-top"><span>Paid this year</span><span class="kicon">✓</span></div><strong>$18,642</strong><small>CAD · 9 invoices</small></div><div class="kpi"><div class="kpi-top"><span>Next statement</span><span class="kicon">◷</span></div><strong>Nov 5</strong><small>Estimated issue date</small></div></div><div class="card"><div class="cardhead"><h2>Monthly settlement invoices</h2><span class="month-chip">CAD</span></div><div class="tablebox"><table><thead><tr><th>Invoice</th><th>Billing period</th><th>Issued</th><th>Due date</th><th>Amount</th><th>Status</th><th></th></tr></thead><tbody><tr><td class="code">HARBOR 2609</td><td>September 2026</td><td>Oct 5, 2026</td><td>Oct 20, 2026</td><td class="invoice-total">$1,842.50</td><td><span class="status orange">Due</span></td><td><button class="link" data-action="invoice-detail">View</button></td></tr><tr><td class="code">HARBOR 2608</td><td>August 2026</td><td>Sep 5, 2026</td><td>Sep 20, 2026</td><td class="invoice-total">$2,118.00</td><td><span class="status">Paid</span></td><td><button class="link" data-action="invoice-detail">View</button></td></tr><tr><td class="code">HARBOR 2607</td><td>July 2026</td><td>Aug 5, 2026</td><td>Aug 20, 2026</td><td class="invoice-total">$1,967.25</td><td><span class="status">Paid</span></td><td><button class="link" data-action="invoice-detail">View</button></td></tr></tbody></table></div><p class="empty-note">Invoice amounts show your customer charges only. Internal carrier costs and margins are never shown.</p></div></section>
-<section class="screen" data-screen="reports"><div class="portal-banner"><div><h2>Reports for your account</h2><p>Download inventory, order and shipment activity for your own Partner account.</p></div><button class="btn" data-action="export">Create export</button></div><div class="grid2"><div class="card"><div class="cardhead"><h2>Available reports</h2></div><div class="event"><div class="eventicon">▦</div><div><b>Inventory balance</b><small>Current ItemCode balances by A / B stock</small></div><button class="link" data-action="export">Export</button></div><div class="event"><div class="eventicon">⇄</div><div><b>Movement history</b><small>Inbound, Fix and shipped outbound movements</small></div><button class="link" data-action="export">Export</button></div><div class="event"><div class="eventicon">⌖</div><div><b>Shipment tracking</b><small>Tracking events and delivery status</small></div><button class="link" data-action="export">Export</button></div></div><div class="card"><div class="cardhead"><h2>Account information</h2><button class="link" data-action="profile">Manage</button></div><div class="detail"><span>Partner</span><b>Harbor &amp; Co.</b></div><div class="detail"><span>Account ID</span><b>PT-1082</b></div><div class="detail"><span>Portal email</span><b>warehouse@harborco.example</b></div><div class="detail"><span>Access scope</span><b>Harbor &amp; Co. only</b></div></div></div></section><div class="footer">Harbor &amp; Co. Shipper Portal · Demo interface · Your account data is private to your organization.</div></div></div></div>
-<div class="modal" id="modal"><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="dialog-head"><div><h2 id="modal-title">Details</h2><p id="modal-copy"></p></div><button class="close" data-close aria-label="Close">×</button></div><div id="modal-body"></div><div class="dialog-actions"><button class="btn" data-close>Close</button><button class="btn primary" id="modal-primary">Done</button></div></div></div><div class="toast" id="toast" role="status"></div>
-<script>(()=>{const titles={home:'Overview',inventory:'Inventory',orders:'Inbound / Outbound',tracking:'Tracking',invoices:'Invoices',reports:'Reports'};const details={home:['Good morning, Harbor & Co.','Here is the latest activity for your inventory and shipments.'],inventory:['Inventory','View current available stock by ItemCode.'],orders:['Inbound / Outbound','Review warehouse receipts and outbound order progress.'],tracking:['Tracking','Follow shipment progress using carrier events.'],invoices:['Invoices','Review monthly settlement invoices and customer charges.'],reports:['Reports','Download reports for your Partner account.']};const modal=document.querySelector('#modal'),toast=document.querySelector('#toast');let t;function flash(s){toast.textContent=s;toast.classList.add('show');clearTimeout(t);t=setTimeout(()=>toast.classList.remove('show'),2300)}function goto(k){if(!titles[k])return;document.querySelectorAll('.screen').forEach(x=>x.classList.toggle('active',x.dataset.screen===k));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.view===k));document.querySelector('#crumb').textContent=titles[k];document.querySelector('#title').textContent=details[k][0];document.querySelector('#subtitle').textContent=details[k][1];window.scrollTo({top:0,behavior:'smooth'})}document.querySelectorAll('[data-view],[data-goto]').forEach(x=>x.addEventListener('click',()=>goto(x.dataset.view||x.dataset.goto)));function show(title,copy,content,primary='Done'){document.querySelector('#modal-title').textContent=title;document.querySelector('#modal-copy').textContent=copy;document.querySelector('#modal-body').innerHTML=content;document.querySelector('#modal-primary').textContent=primary;modal.classList.add('open')}document.querySelectorAll('[data-action]').forEach(x=>x.addEventListener('click',()=>{const a=x.dataset.action;if(a==='export')show('Prepare account report','This demo prepares a file for Harbor & Co. only.','<label class="sub">Report type</label><select class="select" style="width:100%;margin:6px 0 12px"><option>Inventory balance</option><option>Movement history</option><option>Shipment tracking</option></select><label class="sub">Period</label><select class="select" style="width:100%;margin:6px 0"><option>October 2026</option><option>September 2026</option></select>','Prepare export');else if(a==='profile')show('Account profile','Partner account details are managed by your COSHIP contact.','<div class="detail"><span>Company</span><b>Harbor &amp; Co.</b></div><div class="detail"><span>Partner ID</span><b>PT-1082</b></div><div class="detail"><span>Portal contact</span><b>warehouse@harborco.example</b></div><div class="detail"><span>Data scope</span><b>This account only</b></div>');else if(a==='help')show('How can we help?','Contact your COSHIP account representative for warehouse or billing questions.','<div class="detail"><span>Support email</span><b>support@coship.example</b></div><div class="detail"><span>Account</span><b>Harbor &amp; Co. · PT-1082</b></div>','Close');else if(a==='order-detail')show('Order details','Sample warehouse activity for Harbor &amp; Co.','<div class="detail"><span>Purchase order</span><b>HC-4821</b></div><div class="detail"><span>Activity</span><b>Inbound receipt</b></div><div class="detail"><span>Items / units</span><b>4 items · 360 units</b></div><div class="detail"><span>Warehouse status</span><b>Received Oct 27</b></div>');else if(a==='invoice-detail')show('Invoice details','HARBOR 2609 · September 2026 · CAD','<div class="detail"><span>Pick &amp; pack</span><b>$642.50</b></div><div class="detail"><span>Storage</span><b>$720.00</b></div><div class="detail"><span>Shipping charges</span><b>$480.00</b></div><div class="detail"><span>Invoice total</span><b>$1,842.50</b></div><p class="empty-note">Customer-facing service charges only. Carrier costs and internal margin are not included.</p>','Download PDF')}));document.querySelectorAll('[data-close]').forEach(x=>x.addEventListener('click',()=>modal.classList.remove('open')));modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});document.querySelector('#modal-primary').addEventListener('click',()=>{modal.classList.remove('open');flash('Demo action complete · no file or business record was created')});document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('open')});function filterRows(){const q=(document.querySelector('#inventory-search')?.value||'').toLowerCase(),kind=document.querySelector('#stock-filter')?.value||'all';document.querySelectorAll('#inventory-rows tr').forEach(r=>{r.style.display=r.textContent.toLowerCase().includes(q)&&(kind==='all'||r.dataset.stock===kind)?'':'none'})}document.querySelector('#inventory-search')?.addEventListener('input',filterRows);document.querySelector('#stock-filter')?.addEventListener('change',filterRows)})();</script></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Coship Client Portal</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;background:#F6F7F9;color:#1D2127;font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#1F5FBF}a:hover{color:#174A94}
+button,input{font-family:inherit}
+.tab{border:0;background:transparent;padding:12px 14px;min-height:44px;font-size:14px;font-weight:600;color:#5A6370;border-bottom:2px solid transparent;cursor:pointer}
+.tab.on{color:#1D2127;border-bottom-color:#1F5FBF}
+.card{background:#FFFFFF;border:1px solid #D6DAE0;border-radius:10px}
+.kpi{background:#FFFFFF;border:1px solid #D6DAE0;border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.kl{font-size:12px;color:#5A6370;font-weight:600}
+.kv{font-size:26px;font-weight:700}
+.btn{border:1px solid #CBD1D8;background:#FFFFFF;border-radius:8px;padding:8px 14px;min-height:40px;font-size:13px;font-weight:600;color:#1D2127;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.inp{border:1px solid #CBD1D8;border-radius:8px;padding:6px 10px;min-height:40px;font-size:14px;box-sizing:border-box;background:#FFFFFF}
+.row{display:grid;gap:10px;padding:10px 16px;border-top:1px solid #ECEEF2;font-size:13px;align-items:center}
+.hd{color:#5A6370;font-weight:600;font-size:12px;border-top:0;background:#FAFBFC}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
+.mut{color:#5A6370}
+.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.g{background:#E5F3E9;color:#18663A}
+.n{background:#ECEEF2;color:#3D4550}
+.b{background:#E5EEFB;color:#1D4C93}
+.scroll{overflow-x:auto}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-direction: column">
+<header style="background: #FFFFFF; border-bottom: 1px solid #D6DAE0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 14px 20px 0; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between">
+<div style="display: flex; align-items: center; gap: 10px">
+<strong style="font-size: 17px">Coship</strong>
+<span class="mut" style="font-size: 14px">Client Portal</span>
+<span class="badge n">Dogtra</span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut">Data as of Oct 28, 10:42</span>
+<span>dogtra.ops@[domain]</span>
+</div>
+</div>
+<nav aria-label="Portal tabs" style="max-width: 1200px; margin: 0 auto; padding: 4px 20px 0; display: flex; flex-wrap: wrap">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="4">
+<button type="button" class="tab {{t.cls}}" onClick="{{t.go}}">{{t.label}}</button>
+</sc-for>
+</nav>
+</header>
+
+<main style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 22px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px">
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between">
+<h1 style="margin: 0; font-size: 20px">{{title}}</h1>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+<sc-if value="{{showSearch}}" hint-placeholder-val="{{ true }}">
+<input class="inp" type="text" value="{{q}}" onChange="{{onQ}}" placeholder="{{ph}}" aria-label="Search" style="width: 260px; max-width: 100%">
+</sc-if>
+<sc-if value="{{showDates}}" hint-placeholder-val="{{ false }}">
+<span style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center">
+<label class="mut" for="pf" style="font-size: 12px">From</label><input id="pf" class="inp" type="date" value="{{from}}" onChange="{{onFrom}}" style="width: 150px">
+<label class="mut" for="pt" style="font-size: 12px">To</label><input id="pt" class="inp" type="date" value="{{to}}" onChange="{{onTo}}" style="width: 150px">
+</span>
+</sc-if>
+<sc-if value="{{showSerialQ}}" hint-placeholder-val="{{ false }}">
+<input class="inp" type="text" value="{{sq}}" onChange="{{onSQ}}" placeholder="Serial" aria-label="Serial" style="width: 200px; max-width: 100%">
+</sc-if>
+<button type="button" class="btn">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>
+Download Excel
+</button>
+</div>
+</div>
+
+<sc-if value="{{is.inv}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px">
+<div class="kpi"><span class="kl">Total on hand</span><span class="kv">{{totA}}</span></div>
+<div class="kpi"><span class="kl">SKUs in stock</span><span class="kv">{{skuCount}}</span></div>
+<div class="kpi"><span class="kl">Shipped this month</span><span class="kv">{{shippedQty}}</span><span class="mut" style="font-size: 12px">{{shippedPO}} orders</span></div>
+<div class="kpi"><span class="kl">Received this month</span><span class="kv">{{receivedQty}}</span></div>
+</div>
+<section class="card scroll"><div style="min-width: 640px">
+<div class="row hd" style="{{invGrid}}"><span>Item</span><span>UPC</span><span>On hand</span><sc-if value="{{showB}}" hint-placeholder-val="{{ false }}"><span>B stock</span></sc-if><span>Last movement</span></div>
+<sc-for list="{{invRows}}" as="r" hint-placeholder-count="4">
+<div class="row" style="{{invGrid}}"><span>{{r.name}}</span><span class="mono">{{r.upc}}</span><span><strong>{{r.a}}</strong></span><sc-if value="{{showB}}" hint-placeholder-val="{{ false }}"><span>{{r.b}}</span></sc-if><span class="mut">{{r.last}}</span></div>
+</sc-for>
+</div></section>
+</div>
+</sc-if>
+
+<sc-if value="{{is.orders}}" hint-placeholder-val="{{ false }}">
+<section class="card scroll"><div style="min-width: 980px">
+<div class="row hd" style="{{ordGrid}}"><span>Order date</span><span>Ship date</span><span>PO</span><span>Ship to</span><span>Item</span><span>Qty</span><span>Carrier</span><span>Tracking</span><span>Shipping</span><span>Status</span><sc-if value="{{showSerial}}" hint-placeholder-val="{{ false }}"><span>Serial</span></sc-if></div>
+<sc-for list="{{ordRows}}" as="r" hint-placeholder-count="6">
+<div class="row" style="{{ordGrid}}"><span>{{r.poDate}}</span><span>{{r.shipL}}</span><span>{{r.po}}</span><span>{{r.customer}}</span><span>{{r.item}}</span><span>{{r.qty}}</span><span>{{r.carrier}}</span>
+<span><sc-if value="{{r.hasTrk}}" hint-placeholder-val="{{ true }}"><a class="mono" href="{{r.trkUrl}}">{{r.tracking}}</a></sc-if><sc-if value="{{r.noTrk}}" hint-placeholder-val="{{ false }}"><span class="mut">-</span></sc-if></span>
+<span>{{r.fee}}</span><span><span class="badge {{r.cls}}">{{r.status}}</span></span><sc-if value="{{showSerial}}" hint-placeholder-val="{{ false }}"><span class="mono">{{r.serial}}</span></sc-if></div>
+</sc-for>
+</div></section>
+<p class="mut" style="font-size: 12px; margin: 0">Shipping = 청구 운임 (Coship 청구액) · Tracking 클릭 시 운송사 조회 페이지</p>
+</sc-if>
+
+<sc-if value="{{is.inbound}}" hint-placeholder-val="{{ false }}">
+<section class="card scroll"><div style="min-width: 720px">
+<div class="row hd" style="grid-template-columns: 90px 120px 2fr 1.3fr 80px 110px"><span>Date</span><span>Reference</span><span>Item</span><span>UPC</span><span>Qty</span><span>Status</span></div>
+<sc-for list="{{inRows}}" as="r" hint-placeholder-count="4">
+<div class="row" style="grid-template-columns: 90px 120px 2fr 1.3fr 80px 110px"><span>{{r.date}}</span><span>{{r.po}}</span><span>{{r.item}}</span><span class="mono">{{r.upc}}</span><span>{{r.qty}}</span><span><span class="badge {{r.cls}}">{{r.status}}</span></span></div>
+</sc-for>
+</div></section>
+<p class="mut" style="font-size: 12px; margin: 0">Qty = 조정(Fix) 반영 후 확정 수량 · 내부 조정 사유는 표시하지 않음</p>
+</sc-if>
+
+<sc-if value="{{is.serials}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center">
+<span class="mut" style="font-size: 12px">Sort by</span>
+<sc-for list="{{sortChips}}" as="c" hint-placeholder-count="2">
+<button type="button" class="btn {{c.cls}}" onClick="{{c.pick}}" style="{{c.style}}">{{c.name}}</button>
+</sc-for>
+<span class="mut" style="font-size: 12px; margin-left: 8px">{{serialCount}} serials</span>
+</div>
+<section class="card scroll"><div style="min-width: 820px">
+<div class="row hd" style="grid-template-columns: 80px 110px 1.4fr 1.6fr 1.8fr"><span>Ship date</span><span>PO</span><span>Ship to</span><span>Item</span><span>Serial</span></div>
+<sc-for list="{{serialRows}}" as="r" hint-placeholder-count="7">
+<div class="row" style="grid-template-columns: 80px 110px 1.4fr 1.6fr 1.8fr"><span>{{r.ship}}</span><span>{{r.po}}</span><span>{{r.customer}}</span><span>{{r.item}}</span><span class="mono">{{r.serial}}</span></div>
+</sc-for>
+</div></section>
+<p class="mut" style="font-size: 12px; margin: 0">시리얼 관리 화주사만 표시 · 자기 회사 제품의 출고 시리얼만 조회 · Download Excel로 현재 필터 결과 내보내기</p>
+</sc-if>
+
+<sc-if value="{{is.returns}}" hint-placeholder-val="{{ false }}">
+<section class="card scroll"><div style="min-width: 900px">
+<div class="row hd" style="grid-template-columns: 80px 120px 1.6fr 1.6fr 1.5fr 130px"><span>Received</span><span>RMA / Ref</span><span>Item</span><span>Serial</span><span>Return tracking</span><span>Result</span></div>
+<sc-for list="{{retRows}}" as="r" hint-placeholder-count="3">
+<div class="row" style="grid-template-columns: 80px 120px 1.6fr 1.6fr 1.5fr 130px"><span>{{r.date}}</span><span>{{r.ref}}</span><span>{{r.item}}<br><span class="mono mut">{{r.upc}}</span></span><span class="mono">{{r.serial}}</span>
+<span><sc-if value="{{r.hasTrk}}" hint-placeholder-val="{{ true }}"><a class="mono" href="{{r.trkUrl}}">{{r.tracking}}</a></sc-if><sc-if value="{{r.noTrk}}" hint-placeholder-val="{{ false }}"><span class="mut">-</span></sc-if></span>
+<span><span class="badge {{r.cls}}">{{r.result}}</span></span></div>
+</sc-for>
+</div></section>
+<p class="mut" style="font-size: 12px; margin: 0">검색: 날짜 범위, 품목, 시리얼 · 내부 검수 메모는 비표시</p>
+</sc-if>
+
+<sc-if value="{{is.invoices}}" hint-placeholder-val="{{ false }}">
+<section class="card scroll"><div style="min-width: 640px">
+<div class="row hd" style="grid-template-columns: 1.2fr 1fr 1fr 110px 1.6fr"><span>Invoice</span><span>Period</span><span>Amount (CAD)</span><span>Status</span><span>Files</span></div>
+<sc-for list="{{invoices}}" as="r" hint-placeholder-count="3">
+<div class="row" style="grid-template-columns: 1.2fr 1fr 1fr 110px 1.6fr"><span><strong>{{r.no}}</strong></span><span>{{r.period}}</span><span>{{r.amt}}</span><span><span class="badge {{r.cls}}">{{r.status}}</span></span>
+<span style="display: flex; gap: 8px; flex-wrap: wrap"><button type="button" class="btn">PDF</button><button type="button" class="btn">Detail (Excel)</button></span></div>
+</sc-for>
+</div></section>
+<p class="mut" style="font-size: 12px; margin: 0">확정(Issued)된 인보이스만 표시 · 이번 달 인보이스는 확정 후 공개</p>
+</sc-if>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showB":{"editor":"boolean","default":false},"serialClient":{"editor":"boolean","default":true},"$preview":{"width":1280,"height":1100}}'>
+class Component extends DCLogic {
+  S() { return Object.assign({ tab: 'inv', q: '', sq: '', sort: 'date', from: '2026-10-01', to: '2026-10-31' }, this.state || {}); }
+  renderVals() {
+    const s = this.S();
+    const set = (o) => this.setState(Object.assign(this.S(), o));
+    const n0 = (n) => Number(n).toLocaleString('en-US');
+    const showB = this.props.showB === true;
+    const showSerial = false;
+    const serialClient = this.props.serialClient !== false;
+    const q = (s.q || '').trim().toLowerCase();
+    const has = (txt) => !q || txt.toLowerCase().indexOf(q) >= 0;
+    const mon = { Jul: '07', Aug: '08', Sep: '09', Oct: '10', Nov: '11', Dec: '12' };
+    const iso = (d) => { const p = d.split(' '); return '2026-' + mon[p[0]] + '-' + (p[1].length < 2 ? '0' + p[1] : p[1]); };
+    const inR = (d) => { const x = iso(d); return (!s.from || x >= s.from) && (!s.to || x <= s.to); };
+
+    const items = [
+      { name: '280X Training Collar', upc: '813622021804', a: 640, b: 0, last: 'Oct 24 · Shipped 20' },
+      { name: 'Pathfinder 2 GPS Collar', upc: '813622024471', a: 215, b: 0, last: 'Oct 26 · Received 120' },
+      { name: 'ARC 800 Remote Trainer', upc: '813622030110', a: 88, b: 2, last: 'Oct 20 · Shipped 4' },
+      { name: 'Part Bundle · Charging Cable', upc: '-', a: 410, b: 0, last: 'Oct 18 · Shipped 15' }
+    ];
+    const orders = [
+      { poDate: 'Oct 24', ship: '', po: 'DGB-24811', customer: 'Gun Dog Supply', item: 'Pathfinder 2 GPS Collar', qty: 12, carrier: 'UPS', tracking: '', fee: '-', serial: '-' },
+      { poDate: 'Oct 23', ship: 'Oct 24', po: 'DGB-24790', customer: 'Lion Country Supply', item: '280X Training Collar', qty: 20, carrier: 'UPS', tracking: '1Z84W1830312345678', fee: '$42.00', serial: '813622021804A10077101 외 19' },
+      { poDate: 'Oct 22', ship: 'Oct 22', po: '#1048', customer: 'Online · M. Tremblay', item: 'ARC 800 Remote Trainer', qty: 1, carrier: 'CP', tracking: '7023210038855512', fee: '$19.60', serial: '813622030110B20031877' },
+      { poDate: 'Oct 20', ship: 'Oct 21', po: '#1041', customer: 'Online · S. Lee', item: '280X Training Collar', qty: 1, carrier: 'UPS', tracking: '1Z84W1830366601234', fee: '$16.80', serial: '813622021804A10070555' }
+    ];
+    const ups = (t) => 'https://www.ups.com/track?tracknum=' + t;
+    const cp = (t) => 'https://www.canadapost-postescanada.ca/track-reperage/en#/details/' + t;
+    const ordRows = orders.filter((o) => inR(o.poDate) && has(o.po + ' ' + o.item + ' ' + o.customer + ' ' + o.tracking)).map((o) => ({
+      poDate: o.poDate, shipL: o.ship || '-', po: o.po, customer: o.customer, item: o.item, qty: o.qty, carrier: o.carrier, fee: o.fee, serial: o.serial,
+      tracking: o.tracking, hasTrk: !!o.tracking, noTrk: !o.tracking, trkUrl: o.carrier === 'UPS' ? ups(o.tracking) : cp(o.tracking),
+      status: o.ship ? 'Shipped' : 'Processing', cls: o.ship ? 'g' : 'n'
+    }));
+    const inRows = [
+      { date: 'Oct 26', po: 'DG-IN-0915', item: 'Pathfinder 2 GPS Collar', upc: '813622024471', qty: 120, status: 'Received', cls: 'g' },
+      { date: 'Oct 21', po: 'DGB-RT-090', item: '280X Training Collar', upc: '813622021804', qty: 2, status: 'Returned', cls: 'b' },
+      { date: 'Oct 08', po: 'DG-IN-0902', item: 'ARC 800 Remote Trainer', upc: '813622030110', qty: 60, status: 'Received', cls: 'g' }
+    ].filter((r) => inR(r.date) && has(r.po + ' ' + r.item + ' ' + r.upc));
+    const serialAll = [
+      { ship: 'Oct 24', po: 'DGB-24790', customer: 'Lion Country Supply', item: '280X Training Collar', serial: '813622021804A10077101' },
+      { ship: 'Oct 24', po: 'DGB-24790', customer: 'Lion Country Supply', item: '280X Training Collar', serial: '813622021804A10077102' },
+      { ship: 'Oct 24', po: 'DGB-24790', customer: 'Lion Country Supply', item: '280X Training Collar', serial: '813622021804A10077103' },
+      { ship: 'Oct 22', po: '#1048', customer: 'Online · M. Tremblay', item: 'ARC 800 Remote Trainer', serial: '813622030110B20031877' },
+      { ship: 'Oct 21', po: '#1041', customer: 'Online · S. Lee', item: '280X Training Collar', serial: '813622021804A10070555' },
+      { ship: 'Oct 15', po: 'DGB-24650', customer: 'Gun Dog Supply', item: 'Pathfinder 2 GPS Collar', serial: '813622024471C30012008' },
+      { ship: 'Oct 15', po: 'DGB-24650', customer: 'Gun Dog Supply', item: 'Pathfinder 2 GPS Collar', serial: '813622024471C30012009' }
+    ];
+    const serialRows = serialAll.filter((r) => inR(r.ship) && has(r.item + ' ' + r.serial + ' ' + r.po)).sort((x, y) => {
+      if (s.sort === 'item' && x.item !== y.item) return x.item < y.item ? -1 : 1;
+      return iso(y.ship) < iso(x.ship) ? -1 : iso(y.ship) > iso(x.ship) ? 1 : 0;
+    });
+    const sortChips = [['date', 'Ship date'], ['item', 'Item']].map((c) => ({ name: c[1], cls: '', style: s.sort === c[0] ? 'background: #1D2127; color: #FFFFFF; border-color: #1D2127' : '', pick: () => set({ sort: c[0] }) }));
+    const sq = (s.sq || '').trim().toLowerCase();
+    const retRows = [
+      { date: 'Oct 27', ref: 'RMA-DG-1182', item: '280X Training Collar', upc: '813622021804', serial: '813622021804A10070555', carrier: 'UPS', tracking: '1Z84W1830355501111', result: 'Restocked', cls: 'g' },
+      { date: 'Oct 21', ref: 'DGB-RT-090', item: '280X Training Collar', upc: '813622021804', serial: '813622021804A10061230', carrier: 'CP', tracking: '7023210038871234', result: 'B stock', cls: 'b' },
+      { date: 'Oct 09', ref: 'RMA-DG-1161', item: 'ARC 800 Remote Trainer', upc: '813622030110', serial: '813622030110B20029001', carrier: 'UPS', tracking: '', result: 'Returned to Dogtra', cls: 'n' },
+      { date: 'Sep 30', ref: 'RMA-DG-1150', item: 'Pathfinder 2 GPS Collar', upc: '813622024471', serial: '813622024471C30009870', carrier: 'UPS', tracking: '1Z84W1830355409876', result: 'Restocked', cls: 'g' }
+    ].filter((r) => inR(r.date) && has(r.item + ' ' + r.upc) && (!sq || r.serial.toLowerCase().indexOf(sq) >= 0)).map((r) => Object.assign({}, r, {
+      hasTrk: !!r.tracking, noTrk: !r.tracking, trkUrl: r.carrier === 'UPS' ? ups(r.tracking) : cp(r.tracking)
+    }));
+    const invRows = items.filter((i) => has(i.name + ' ' + i.upc)).map((i) => ({ name: i.name, upc: i.upc, a: n0(i.a), b: n0(i.b), last: i.last }));
+    const tabDefs = [['inv', 'Inventory'], ['orders', 'Orders'], ['inbound', 'Inbound']].concat(serialClient ? [['serials', 'Serials']] : []).concat([['returns', 'Returns'], ['invoices', 'Invoices']]);
+    const tab = tabDefs.some((t) => t[0] === s.tab) ? s.tab : 'inv';
+    const is = {}; tabDefs.forEach((t) => { is[t[0]] = tab === t[0]; });
+    const phs = { inv: 'Item, UPC', orders: 'PO, item, ship to, tracking', inbound: 'Reference, item, UPC', serials: 'Item, serial, PO', returns: 'Item, UPC', invoices: '' };
+    return {
+      tabs: tabDefs.map((t) => ({ label: t[1], cls: s.tab === t[0] ? 'on' : '', go: () => set({ tab: t[0] }) })),
+      is: is, title: tabDefs.find((t) => t[0] === tab)[1], ph: phs[tab],
+      showSerialQ: tab === 'returns', sq: s.sq, onSQ: (e) => set({ sq: e.target.value }),
+      serialRows: serialRows, serialCount: serialRows.length, sortChips: sortChips, retRows: retRows,
+      showSearch: s.tab !== 'invoices', q: s.q, onQ: (e) => set({ q: e.target.value }),
+      showDates: ['orders', 'inbound', 'serials', 'returns'].indexOf(tab) >= 0, from: s.from, to: s.to,
+      onFrom: (e) => set({ from: e.target.value }), onTo: (e) => set({ to: e.target.value }),
+      showB: showB, showSerial: showSerial,
+      totA: n0(items.reduce((t, i) => t + i.a, 0)), skuCount: items.length, shippedQty: n0(1180), shippedPO: 42, receivedQty: n0(180),
+      invGrid: showB ? 'grid-template-columns: 2fr 1.3fr 90px 90px 1.4fr' : 'grid-template-columns: 2fr 1.3fr 90px 1.4fr',
+      invRows: invRows,
+      ordGrid: showSerial ? 'grid-template-columns: 70px 70px 96px 1.3fr 1.5fr 44px 56px 1.4fr 70px 90px 1.6fr' : 'grid-template-columns: 70px 70px 96px 1.3fr 1.5fr 44px 56px 1.4fr 70px 90px',
+      ordRows: ordRows, inRows: inRows,
+      invoices: [
+        { no: 'DOGTRA 2609', period: 'Sep 2026', amt: '$3,912.40', status: 'Issued', cls: 'g' },
+        { no: 'DOGTRA 2608', period: 'Aug 2026', amt: '$4,105.75', status: 'Paid', cls: 'b' },
+        { no: 'DOGTRA 2607', period: 'Jul 2026', amt: '$3,688.20', status: 'Paid', cls: 'b' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
+
